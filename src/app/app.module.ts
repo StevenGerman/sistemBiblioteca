@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { EditorialListarComponent } from './components/pages/editoriales/editorial-listar/editorial-listar.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { EditorialAgregarComponent } from './components/pages/editoriales/editorial-agregar/editorial-agregar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HomeComponent,
     EditorialListarComponent,
+    EditorialAgregarComponent,
   ],
   imports: [
     BrowserModule,

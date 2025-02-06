@@ -2,15 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-
-export interface Editorial{
-  idEditorial?: String;
-  ediNombre: String;
-  ediDireccion: String;
-  ediTelefono: String;
-  ediEmail: String;
-}
+import { Editorial } from '../interfaces/editorial.model';
 
 @Injectable({
   providedIn: 'root'

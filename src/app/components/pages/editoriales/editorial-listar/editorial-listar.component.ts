@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Editorial, EditorialService } from 'src/app/services/editorial.service';
+import { EditorialService } from 'src/app/services/editorial.service';
+import { Editorial } from 'src/app/interfaces/editorial.model';
 
 @Component({
   selector: 'app-editorial-listar',
