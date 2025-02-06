@@ -1,0 +1,25 @@
+<div class="container-md">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Email</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let editorial of Editoriales">
+            <th scope="row">{{editorial.idEditorial}}</th>
+            <td>{{editorial.ediNombre}}</td>
+            <td>{{editorial.ediTelefono}}</td>
+            <td>{{editorial.ediDireccion}}</td>
+            <td>{{editorial.ediEmail}}</td>
+            <td><button class="btn btn-warning">E</button></td>
+            <td><button class="btn btn-danger">B</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
