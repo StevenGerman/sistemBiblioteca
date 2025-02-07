@@ -8,6 +8,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { EditorialListarComponent } from './components/pages/editoriales/editorial-listar/editorial-listar.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EditorialAgregarComponent } from './components/pages/editoriales/editorial-agregar/editorial-agregar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { EditorialAgregarComponent } from './components/pages/editoriales/editor
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

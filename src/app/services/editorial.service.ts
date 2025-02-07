@@ -17,5 +17,9 @@ export class EditorialService {
     return this.clienteHttp.get<Editorial[]>(this.urlApi);
   }
 
+  agregarEditorial(datosEditorial:Editorial):Observable<any>{
+    return this.clienteHttp.post(this.urlApi,datosEditorial);
+  }
+
 
 }
