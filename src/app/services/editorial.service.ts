@@ -21,5 +21,8 @@ export class EditorialService {
     return this.clienteHttp.post(this.urlApi,datosEditorial);
   }
 
+  eliminarEditorial(idEditorial:any):Observable<any>{
+    return this.clienteHttp.delete(`${this.urlApi}?idEditorial=${idEditorial}`);
+  }
 
 }

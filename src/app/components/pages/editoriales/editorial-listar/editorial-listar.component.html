@@ -18,7 +18,7 @@
             <td>{{editorial.ediDireccion}}</td>
             <td>{{editorial.ediEmail}}</td>
             <td><button class="btn btn-warning">E</button></td>
-            <td><button class="btn btn-danger">B</button></td>
+            <td><button class="btn btn-danger" (click)="eliminarEditorial(editorial.idEditorial || undefined)" >B</button></td>
           </tr>
         </tbody>
       </table>

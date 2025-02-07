@@ -9,6 +9,7 @@ import { EditorialListarComponent } from './components/pages/editoriales/editori
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EditorialAgregarComponent } from './components/pages/editoriales/editorial-agregar/editorial-agregar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditorialEditarComponent } from './components/pages/editoriales/editorial-editar/editorial-editar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     EditorialListarComponent,
     EditorialAgregarComponent,
+    EditorialEditarComponent,
   ],
   imports: [
     BrowserModule,
