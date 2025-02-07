@@ -1,4 +1,11 @@
 <div class="container-md">
+  <div class="row">
+    <div class="col col-12">
+      <button class="btn btn-warning" routerLink="/editorial-agregar"  >
+          Agregar
+      </button>
+    </div>
+  </div>
     <table class="table">
         <thead>
           <tr>
@@ -17,7 +24,10 @@
             <td>{{editorial.ediTelefono}}</td>
             <td>{{editorial.ediDireccion}}</td>
             <td>{{editorial.ediEmail}}</td>
-            <td><button class="btn btn-warning">E</button></td>
+            <td><button class="btn btn-warning" [routerLink]="[
+              '/editorial-editar',
+              editorial.idEditorial
+            ]" >E</button></td>
             <td><button class="btn btn-danger" (click)="eliminarEditorial(editorial.idEditorial || undefined)" >B</button></td>
           </tr>
         </tbody>
