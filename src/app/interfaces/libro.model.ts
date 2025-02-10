@@ -9,4 +9,5 @@ export interface Libro{
     matNombre: String;
     autorID: String;
     autNombre: String;
+    autApellido: String;
 }
