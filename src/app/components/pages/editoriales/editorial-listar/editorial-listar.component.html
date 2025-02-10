@@ -14,8 +14,12 @@
       
     
   </div>
-    <table class="table">
-        <thead>
+  <div class="table-responsive">
+    <table class="table caption-top table-striped">
+      <caption>
+        Listado de Editoriales
+      </caption>
+      <thead class="table-dark">
           <tr>
             <th scope="col">Nombre</th>
             <th scope="col">Direccion</th>
@@ -26,15 +30,19 @@
         </thead>
         <tbody class="table-group-divider">
           <tr *ngFor="let editorial of Editoriales">
-            <td scope="row" >{{editorial.ediNombre}}</td>
+            <td >{{editorial.ediNombre}}</td>
             <td>{{editorial.ediTelefono}}</td>
             <td>{{editorial.ediDireccion}}</td>
             <td>{{editorial.ediEmail}}</td>
-            <td><button class="btn btn-warning" [routerLink]="[
+            <td>
+            <button class="btn btn-warning m-2" [routerLink]="[
               '/editorial-editar',editorial.idEditorial
-            ]" ><i class="bi bi-pencil-square"></i></button></td>
-            <td><button class="btn btn-danger" (click)="eliminarEditorial(editorial.idEditorial || undefined)" ><i class="bi bi-trash-fill"></i></button></td>
+            ]" ><i class="bi bi-pencil-square"></i></button>
+            <button class="btn btn-danger m-2" (click)="eliminarEditorial(editorial.idEditorial || undefined)" ><i class="bi bi-trash-fill"></i></button>
+            </td>
           </tr>
         </tbody>
       </table>
+  </div>
+    
 </div>
