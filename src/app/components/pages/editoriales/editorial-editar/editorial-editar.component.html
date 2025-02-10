@@ -1,1 +1,23 @@
-<p>editorial-editar works!</p>
+<div class="container-md">
+    <form [formGroup]="formularioEditoriales" (ngSubmit)="enviarDatos()" >
+  <div class="mb-3">
+    <label class="form-label">Nombre</label>
+    <input type="text" formControlName="ediNombre" class="form-control">
+    <div class="form-text">Ingrese un nombre para la editorial.</div>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Dirección</label>
+    <input type="text" formControlName="ediDireccion" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Telefono</label>
+    <input type="text" formControlName="ediTelefono"  class="form-control">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Email</label>
+    <input type="text" formControlName="ediEmail"  class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+  <button type="button" [routerLink]="['/editorial-listar']" class="btn btn-primary">Cancelar</button>
+</form>
+</div>

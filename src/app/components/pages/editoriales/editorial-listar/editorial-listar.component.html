@@ -25,8 +25,7 @@
             <td>{{editorial.ediDireccion}}</td>
             <td>{{editorial.ediEmail}}</td>
             <td><button class="btn btn-warning" [routerLink]="[
-              '/editorial-editar',
-              editorial.idEditorial
+              '/editorial-editar',editorial.idEditorial
             ]" >E</button></td>
             <td><button class="btn btn-danger" (click)="eliminarEditorial(editorial.idEditorial || undefined)" >B</button></td>
           </tr>
