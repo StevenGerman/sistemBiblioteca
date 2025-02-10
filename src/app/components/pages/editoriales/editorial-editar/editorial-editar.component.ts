@@ -60,7 +60,7 @@ export class EditorialEditarComponent implements OnInit{
       
         
         console.log(respuesta);
-
+        this.ruteador.navigateByUrl('editorial-listar');
       });
     }
 
