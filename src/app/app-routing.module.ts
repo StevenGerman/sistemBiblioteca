@@ -10,6 +10,9 @@ import { RolesAgregarComponent } from './components/pages/roles/roles-agregar/ro
 import { LibroListarComponent } from './components/pages/libros/libro-listar/libro-listar.component';
 import { LibroAgregarComponent } from './components/pages/libros/libro-agregar/libro-agregar.component';
 import { LibroEditarComponent } from './components/pages/libros/libro-editar/libro-editar.component';
+import { PersonaListarComponent } from './components/pages/personas/persona-listar/persona-listar.component';
+import { PersonaAgregarComponent } from './components/pages/personas/persona-agregar/persona-agregar.component';
+import { PersonaEditarComponent } from './components/pages/personas/persona-editar/persona-editar.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -26,6 +29,11 @@ const routes: Routes = [
   {path: 'libro-listar', component: LibroListarComponent},
   {path: 'libro-agregar', component: LibroAgregarComponent},
   {path: 'libro-editar', component: LibroEditarComponent},
+
+  {path: 'persona-listar', component: PersonaListarComponent},
+  {path: 'persona-agregar', component: PersonaAgregarComponent},
+  {path: 'persona-editar', component: PersonaEditarComponent},
+
 
 
 ];
