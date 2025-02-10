@@ -43,7 +43,7 @@ export class EditorialEditarComponent implements OnInit{
         ediNombre:['',[Validators.required]],
         ediDireccion:['',[Validators.required]],
         ediTelefono:['',[Validators.required]],
-        ediEmail:['',[Validators.required]]
+        ediEmail:['',[Validators.required,Validators.email]]
       })
     }
 
@@ -52,6 +52,10 @@ export class EditorialEditarComponent implements OnInit{
 
       
     }
+
+    hasErrors(controlName: string, errorType: string) {
+      return this.formularioEditoriales.get(controlName)?.hasError(errorType) && this.formularioEditoriales.get(controlName)?.touched;
+      }
 
     enviarDatos():void{
       console.log(this.formularioEditoriales.value);
