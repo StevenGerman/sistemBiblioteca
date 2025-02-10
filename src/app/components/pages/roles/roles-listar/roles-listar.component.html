@@ -17,18 +17,18 @@
     <div class="table-responsive">
       <table class="table caption-top table-striped">
         <caption>
-          Listado de Editoriales
+          Listado de Roles
         </caption>
         <thead class="table-dark">
             <tr>
-              <th scope="col">Nombre</th>
-              <th scope="col">Acciones</th>
+              <th class="text-center" scope="col">Nombre</th>
+              <th class="text-center"  scope="col">Acciones</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
             <tr *ngFor="let rol of listadoRoles">
-              <td >{{rol.rolNombre}}</td>
-              <td>
+              <td class="text-center" >{{rol.rolNombre}}</td>
+              <td class="d-flex justify-content-center">
               <button class="btn btn-warning m-2" [routerLink]="[
                 '/rol-editar',
               ]" ><i class="bi bi-pencil-square"></i></button>

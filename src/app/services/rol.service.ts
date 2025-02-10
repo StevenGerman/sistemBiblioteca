@@ -8,7 +8,7 @@ import { Rol } from '../interfaces/rol.model';
 })
 export class RolService {
 
-  apiUrl : string = "http://localhost/newAPIBiblioteca/rol.php";
+  apiUrl : string = "http://localhost/newAPIBiblioteca/roles.php";
 
   constructor(private clienteHttp:HttpClient) { }
 

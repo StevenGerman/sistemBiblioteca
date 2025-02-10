@@ -25,9 +25,7 @@ import { PrestamosEditarComponent } from './components/pages/prestamos/prestamos
 import { RolesListarComponent } from './components/pages/roles/roles-listar/roles-listar.component';
 import { RolesAgregarComponent } from './components/pages/roles/roles-agregar/roles-agregar.component';
 import { RolesEditarComponent } from './components/pages/roles/roles-editar/roles-editar.component';
-import { AutoresListarComponent } from './components/pages/autores-listar/autores-listar.component';
-import { AutoresAgregarComponent } from './components/pages/autores/autores-agregar/autores-agregar.component';
-import { AutoresEditarComponent } from './components/pages/autores/autores-editar/autores-editar.component';
+import { AutoresListarComponent } from './components/pages/autores/autores-listar/autores-listar.component';
 
 @NgModule({
   declarations: [
@@ -53,8 +51,6 @@ import { AutoresEditarComponent } from './components/pages/autores/autores-edita
     RolesAgregarComponent,
     RolesEditarComponent,
     AutoresListarComponent,
-    AutoresAgregarComponent,
-    AutoresEditarComponent,
   ],
   imports: [
     BrowserModule,
