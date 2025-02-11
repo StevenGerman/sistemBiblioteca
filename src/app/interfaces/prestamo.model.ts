@@ -6,5 +6,5 @@ export interface Prestamo{
     personaID: String;
     perNombre: String;
     libroID: String;
-    libNombre: String;
+    libTitulo: String;
 }
