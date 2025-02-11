@@ -17,7 +17,7 @@ export class AutoresListarComponent implements OnInit{
   ){}
 
   ngOnInit(): void {
-    
+    this.cargarAutores();
   }
 
   cargarAutores(){
