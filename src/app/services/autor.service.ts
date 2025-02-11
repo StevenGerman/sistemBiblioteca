@@ -8,7 +8,7 @@ import { Autor } from '../interfaces/autor.model';
 })
 export class AutorService {
 
-  apiUrl : string = "http://localhost/newAPIBiblioteca/prestamos.php";
+  apiUrl : string = "http://localhost/newAPIBiblioteca/autores.php";
 
   constructor(private clienteHttp:HttpClient) { }
 
