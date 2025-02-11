@@ -15,12 +15,12 @@ export class LibroListarComponent implements OnInit{
 
     private servicioLibros: LibroService,
   ){
-    this.cargarLibros();
+    
   }
 
 
   ngOnInit(): void {
-    
+    this.cargarLibros();
   }
 
   cargarLibros(){
