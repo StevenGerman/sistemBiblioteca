@@ -13,6 +13,10 @@ import { LibroEditarComponent } from './components/pages/libros/libro-editar/lib
 import { PersonaListarComponent } from './components/pages/personas/persona-listar/persona-listar.component';
 import { PersonaAgregarComponent } from './components/pages/personas/persona-agregar/persona-agregar.component';
 import { PersonaEditarComponent } from './components/pages/personas/persona-editar/persona-editar.component';
+import { PrestamosListarComponent } from './components/pages/prestamos/prestamos-listar/prestamos-listar.component';
+import { PrestamosAgregarComponent } from './components/pages/prestamos/prestamos-agregar/prestamos-agregar.component';
+import { PrestamosEditarComponent } from './components/pages/prestamos/prestamos-editar/prestamos-editar.component';
+import { AutoresListarComponent } from './components/pages/autores/autores-listar/autores-listar.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -34,6 +38,13 @@ const routes: Routes = [
   {path: 'persona-agregar', component: PersonaAgregarComponent},
   {path: 'persona-editar', component: PersonaEditarComponent},
 
+  {path: 'prestamo-listar', component: PrestamosListarComponent},
+  {path: 'prestamo-agregar', component: PrestamosAgregarComponent},
+  {path: 'prestamo-editar', component: PrestamosEditarComponent},
+
+  {path: 'autores-listar', component: AutoresListarComponent},
+  {path: 'autores-agregar', component: AutoresListarComponent},
+  {path: 'autores-editar', component: AutoresListarComponent},
 
 
 ];
