@@ -16,6 +16,23 @@ export class PrestamoService {
     return this.clienteHttp.get<Prestamo[]>(this.urlApi);
   }
 
+  obtenerPrestamoID():Observable<Prestamo>{
+      return this.clienteHttp.get<Prestamo>(this.urlApi);
+    }
+  
+      agregarPrestamo(datosPrestamo:Prestamo):Observable<any>{
+        return this.clienteHttp.post(this.urlApi,datosPrestamo);
+      }
+    
+      editarEditorial(datosPrestamo:Prestamo){
+        return this.clienteHttp.put(this.urlApi,datosPrestamo);
+      }
+    
+      eliminarEditorial(idPrestamo:any):Observable<any>{
+        return this.clienteHttp.delete(`${this.urlApi}?idPrestamo=${idPrestamo}`);
+      }
+  
+
 
 
 }

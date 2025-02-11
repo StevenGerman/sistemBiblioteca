@@ -16,4 +16,31 @@ export class LibroService {
     return this.clienteHttp.get<Libro[]>(this.apiUrl);
   }
 
+  agregarLibro(datosLibro:Libro):Observable<any>{
+    return this.clienteHttp.post(this.apiUrl,datosLibro);
+  }
+
+  editarLibro(datosLibro:Libro){
+    this.clienteHttp.put(this.apiUrl,datosLibro);
+  }
+
+  eliminarLibro(idLibro:number):any{
+    this.clienteHttp.delete(`${this.apiUrl}?idLibro=${idLibro}`);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

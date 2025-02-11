@@ -16,4 +16,22 @@ export class MateriaService {
     return this.clienteHttp.get<Materia[]>(this.apiUrl);
   }
 
+  obtenerMateriaID():Observable<Materia>{
+    return this.clienteHttp.get<Materia>(this.apiUrl);
+  }
+
+    agregarMateria(datosMateria:Materia):Observable<any>{
+      return this.clienteHttp.post(this.apiUrl,datosMateria);
+    }
+  
+    editarEditorial(datosMateria:Materia){
+      return this.clienteHttp.put(this.apiUrl,datosMateria);
+    }
+  
+    eliminarEditorial(idMateria:any):Observable<any>{
+      return this.clienteHttp.delete(`${this.apiUrl}?idMateria=${idMateria}`);
+    }
+
+
+
 }

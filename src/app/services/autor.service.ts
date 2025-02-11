@@ -16,4 +16,19 @@ export class AutorService {
     return this.clienteHttp.get<Autor[]>(this.apiUrl);
   }
 
+  obtenerAutorID():Observable<Autor>{{
+    return this.clienteHttp.get<Autor>(this.apiUrl);
+  }}
+
+  editarAutor(datosAutor:Autor){
+    return this.clienteHttp.put(this.apiUrl,datosAutor);
+  }
+
+  eliminar(idAutor:any):Observable<any>{
+    return this.clienteHttp.delete(this.apiUrl,idAutor);
+  }
+
+
+
+
 }
