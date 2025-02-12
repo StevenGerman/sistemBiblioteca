@@ -53,6 +53,7 @@ const routes: Routes = [
   {path: 'materias-agregar', component: MateriasAgregarComponent},
   {path: 'materias-editar', component: MateriasEditarComponent},
 
+  
 
 ];
 
