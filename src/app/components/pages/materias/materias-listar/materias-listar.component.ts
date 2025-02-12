@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Materia } from 'src/app/interfaces/materia.model';
 import { MateriaService } from 'src/app/services/materia.service';
 
@@ -12,6 +13,7 @@ export class MateriasListarComponent implements OnInit {
 
   listadoMaterias:Materia[]=[];
   constructor(
+    private ruteador: Router,
     private servicioMaterias:MateriaService,
   ){}
 
@@ -30,7 +32,11 @@ export class MateriasListarComponent implements OnInit {
   eliminarMateria(idMateria:any){
     this.servicioMaterias.eliminarEditorial(idMateria).subscribe((respuesta)=>{
       console.log(respuesta);
+      
+      this.cargarMaterias();
+      
     })
+   
   }
 
 
