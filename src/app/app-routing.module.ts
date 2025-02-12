@@ -17,6 +17,9 @@ import { PrestamosListarComponent } from './components/pages/prestamos/prestamos
 import { PrestamosAgregarComponent } from './components/pages/prestamos/prestamos-agregar/prestamos-agregar.component';
 import { PrestamosEditarComponent } from './components/pages/prestamos/prestamos-editar/prestamos-editar.component';
 import { AutoresListarComponent } from './components/pages/autores/autores-listar/autores-listar.component';
+import { MateriasListarComponent } from './components/pages/materias/materias-listar/materias-listar.component';
+import { MateriasAgregarComponent } from './components/pages/materias/materias-agregar/materias-agregar.component';
+import { MateriasEditarComponent } from './components/pages/materias/materias-editar/materias-editar.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -45,6 +48,10 @@ const routes: Routes = [
   {path: 'autores-listar', component: AutoresListarComponent},
   {path: 'autores-agregar', component: AutoresListarComponent},
   {path: 'autores-editar', component: AutoresListarComponent},
+
+  {path: 'materias-listar', component: MateriasListarComponent},
+  {path: 'materias-agregar', component: MateriasAgregarComponent},
+  {path: 'materias-editar', component: MateriasEditarComponent},
 
 
 ];
