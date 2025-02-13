@@ -34,10 +34,7 @@ export class EditorialListarComponent implements OnInit{
         this.cargarEditoriales();
       })
     }
-    
-    
     this.ruteador.navigateByUrl('editorial-listar');
-
   }
 
 }

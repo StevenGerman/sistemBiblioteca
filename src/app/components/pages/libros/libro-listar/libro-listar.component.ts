@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Libro } from 'src/app/interfaces/libro.model';
 import { LibroService } from 'src/app/services/libro.service';
 
@@ -12,7 +13,7 @@ export class LibroListarComponent implements OnInit{
   listadoLibros:Libro[]= [];
 
   constructor(
-
+    private ruteador: Router,
     private servicioLibros: LibroService,
   ){
     
@@ -28,6 +29,14 @@ export class LibroListarComponent implements OnInit{
       console.log(respuesta);
       this.listadoLibros = respuesta;
     })
+  }
+
+  eliminarLibro(idLibro:any){
+    this.servicioLibros.eliminarLibro(idLibro).subscribe((respuesta)=>{
+      console.log(respuesta);
+      this.cargarLibros();
+    })
+    this.ruteador.navigateByUrl('libro-listar');
   }
 
 }

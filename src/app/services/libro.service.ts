@@ -21,11 +21,11 @@ export class LibroService {
   }
 
   editarLibro(datosLibro:Libro){
-    this.clienteHttp.put(this.apiUrl,datosLibro);
+    return this.clienteHttp.put(this.apiUrl,datosLibro);
   }
 
-  eliminarLibro(idLibro:number):any{
-    this.clienteHttp.delete(`${this.apiUrl}?idLibro=${idLibro}`);
+  eliminarLibro(idLibro:any){
+    return this.clienteHttp.delete(`${this.apiUrl}?idLibro=${idLibro}`);
   }
 
 
