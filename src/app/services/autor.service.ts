@@ -24,8 +24,8 @@ export class AutorService {
     return this.clienteHttp.put(this.apiUrl,datosAutor);
   }
 
-  eliminar(idAutor:any):Observable<any>{
-    return this.clienteHttp.delete(this.apiUrl,idAutor);
+  eliminaraAutor(idAutor:any){
+    return this.clienteHttp.delete(`${this.apiUrl}?idAutor=${idAutor}`);
   }
 
 

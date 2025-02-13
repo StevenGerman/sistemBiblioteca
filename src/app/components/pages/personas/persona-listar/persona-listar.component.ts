@@ -12,7 +12,7 @@ export class PersonaListarComponent implements OnInit {
   listadoPersonas:Persona[] = [];
 
   constructor(
-
+    
     private servicioPersonas: PersonaService
   ){
     this.cargarPersonas();
@@ -28,6 +28,13 @@ export class PersonaListarComponent implements OnInit {
     this.servicioPersonas.obtenerPersonas().subscribe((respuesta)=>{
       console.log(respuesta);
       this.listadoPersonas = respuesta;
+    })
+  }
+
+  eliminarPersona(idPersona:any){
+    this.servicioPersonas.eliminarPersona(idPersona).subscribe((respuesta)=>{
+      console.log(respuesta);
+      this.cargarPersonas();
     })
   }
 

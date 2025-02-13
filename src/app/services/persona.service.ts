@@ -28,7 +28,7 @@ export class PersonaService {
           return this.clienteHttp.put(this.urlApi,datosPersona);
         }
       
-        eliminarEditorial(idPersona:any):Observable<any>{
+        eliminarPersona(idPersona:any):Observable<any>{
           return this.clienteHttp.delete(`${this.urlApi}?idPersona=${idPersona}`);
         }
 
