@@ -26,6 +26,8 @@ import { RolesListarComponent } from './components/pages/roles/roles-listar/role
 import { RolesAgregarComponent } from './components/pages/roles/roles-agregar/roles-agregar.component';
 import { RolesEditarComponent } from './components/pages/roles/roles-editar/roles-editar.component';
 import { AutoresListarComponent } from './components/pages/autores/autores-listar/autores-listar.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { RegistroComponent } from './components/login/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { AutoresListarComponent } from './components/pages/autores/autores-lista
     RolesAgregarComponent,
     RolesEditarComponent,
     AutoresListarComponent,
+    LoginComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,

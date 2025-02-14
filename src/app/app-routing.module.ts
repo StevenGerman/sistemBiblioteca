@@ -20,6 +20,8 @@ import { AutoresListarComponent } from './components/pages/autores/autores-lista
 import { MateriasListarComponent } from './components/pages/materias/materias-listar/materias-listar.component';
 import { MateriasAgregarComponent } from './components/pages/materias/materias-agregar/materias-agregar.component';
 import { MateriasEditarComponent } from './components/pages/materias/materias-editar/materias-editar.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { RegistroComponent } from './components/login/registro/registro.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -52,6 +54,9 @@ const routes: Routes = [
   {path: 'materias-listar', component: MateriasListarComponent},
   {path: 'materias-agregar', component: MateriasAgregarComponent},
   {path: 'materias-editar', component: MateriasEditarComponent},
+
+  {path: 'login', component: LoginComponent},
+  {path: 'registro', component: RegistroComponent},
 
   
 
