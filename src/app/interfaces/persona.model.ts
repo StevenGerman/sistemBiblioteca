@@ -4,6 +4,6 @@ export interface Persona{
     perApellido: String;
     perDni: String;
     perContrasena: String;
-    rolID: String;
-    rolNombre: String;
+    rolID?: String;
+    rolNombre?: String;
 }
