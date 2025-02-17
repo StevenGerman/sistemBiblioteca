@@ -37,6 +37,7 @@ export class RegistroComponent implements OnInit{
   }
 
   enviarDatos(){
+    console.log(this.formularioRegistro.value);
     this.servicioRegistro.agregarRegistro(this.formularioRegistro.value).subscribe((respuesta)=>{
       console.log(respuesta);
     })

@@ -27,7 +27,7 @@ import { RolesAgregarComponent } from './components/pages/roles/roles-agregar/ro
 import { RolesEditarComponent } from './components/pages/roles/roles-editar/roles-editar.component';
 import { AutoresListarComponent } from './components/pages/autores/autores-listar/autores-listar.component';
 import { LoginComponent } from './components/login/login/login.component';
-
+import { RegistroComponent } from './components/login/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,8 @@ import { LoginComponent } from './components/login/login/login.component';
     RolesAgregarComponent,
     RolesEditarComponent,
     AutoresListarComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent,
     
   ],
   imports: [
