@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit{
 
     private ruteador : Router,
     private formulario : FormBuilder,
+    private serivicioLogin: LoginService,
   ){
     this.formularioLogin = formulario.group({
       perDni:['',[Validators.required]],
@@ -31,7 +33,14 @@ export class LoginComponent implements OnInit{
     return this.formularioLogin.get(controlName)?.hasError(errorType) && this.formularioLogin.get(controlName)?.touched;
   }
 
-  enviarDatos(){}
+  enviarDatos(){
+    console.log(this.formularioLogin);
+
+    this.serivicioLogin.login(this.formularioLogin).subscribe((respuesta)=>{
+      console.log(respuesta);
+      
+    })
+  }
 
 
 }
