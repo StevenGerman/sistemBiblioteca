@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Login } from 'src/app/interfaces/login.model';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -34,12 +35,24 @@ export class LoginComponent implements OnInit{
   }
 
   enviarDatos(){
-    console.log(this.formularioLogin);
+    if(!this.formularioLogin.invalid) return;
+    if(this.formularioLogin.value.perDni == undefined) return;
 
-    this.serivicioLogin.login(this.formularioLogin).subscribe((respuesta)=>{
-      console.log(respuesta);
+
+    const objeto:Login = {
+
+      perDni: this.formularioLogin.value.perDni,
+      perContrasena :this.formularioLogin.value.perContrasena,
+
+    }
+
+    this.serivicioLogin.LoginUser(objeto).subscribe({
+      next:(data){
       
+      }
     })
+
+   
   }
 
 
