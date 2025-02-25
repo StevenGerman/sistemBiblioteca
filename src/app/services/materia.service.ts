@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Materia } from '../interfaces/materia.model';
@@ -13,7 +13,8 @@ export class MateriaService {
   constructor(private clienteHttp:HttpClient) { }
 
   obtenerMaterias():Observable<Materia[]>{
-    return this.clienteHttp.get<Materia[]>(this.apiUrl);
+    const headers = new HttpHeaders().set("Authorization", `Bearer ${localStorage.getItem('token')}`);
+    return this.clienteHttp.get<Materia[]>(this.apiUrl,{ headers });
   }
 
   obtenerMateriaID():Observable<Materia>{
