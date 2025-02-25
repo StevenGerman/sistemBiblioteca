@@ -40,8 +40,13 @@ export class EditorialAgregarComponent implements OnInit{
       console.log(this.formularioEditoriales.value);
 
       this.servicioEditoriales.agregarEditorial(this.formularioEditoriales.value).subscribe(()=>{
-      
-        this.ruteador.navigateByUrl('/editorial-listar');
+        setTimeout(()=>{
+          
+  
+          this.ruteador.navigateByUrl('editorial-listar');
+        },900)
+  
+        
 
       });
     }

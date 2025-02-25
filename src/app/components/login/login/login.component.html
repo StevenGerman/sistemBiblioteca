@@ -15,12 +15,12 @@
     </div>
     <div class="mb-3">
       <label class="form-label">Contraseña</label>
-      <input type="email" formControlName="perContrasena" class="form-control"
+      <input formControlName="perContrasena" class="form-control"
         [ngClass]="{'is-invalid': hasErrors('perContrasena','required')}">
       <div *ngIf="hasErrors('perContrasena','required')" class="form-text">Ingrese una contraseña.</div>
       
     </div>
-    <button type="submit" class="btn btn-primary m-2">Guardar <i class="bi bi-floppy2-fill"></i></button>
+    <button type="submit" class="btn btn-primary m-2" >Guardar <i class="bi bi-floppy2-fill"></i></button>
     <button type="button" routerLink="home" class="btn btn-secondary">Cancelar</button>
   </form>
 </div>

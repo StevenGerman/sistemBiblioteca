@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  urlApi: string = "newAPIBiblioteca.test/login.php"
+  urlApi: string = "http://localhost/newAPIBiblioteca/login.php"
 
   constructor(private clienteHttp:HttpClient) { }
 
   
-  LoginUser(objeto:Login):Observable<any>{
+  LoginUser(objeto:any):Observable<any>{
     return this.clienteHttp.post(this.urlApi,objeto);
   }
 

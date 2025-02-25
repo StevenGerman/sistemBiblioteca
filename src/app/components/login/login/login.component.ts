@@ -35,24 +35,41 @@ export class LoginComponent implements OnInit{
   }
 
   enviarDatos(){
-    if(!this.formularioLogin.invalid) return;
-    if(this.formularioLogin.value.perDni == undefined) return;
 
-
-    const objeto:Login = {
+    const objeto:any = {
 
       perDni: this.formularioLogin.value.perDni,
-      perContrasena :this.formularioLogin.value.perContrasena,
+      perContrasena: this.formularioLogin.value.perContrasena,
 
     }
+    console.log(objeto);
 
     this.serivicioLogin.LoginUser(objeto).subscribe({
-      next:(data){
+      next:(data)=>{
+        if(data.isSuccess){
+          localStorage.setItem("token", data.token);
+          console.log(data.token);
+          setTimeout(()=>{
+            
+  
+            this.ruteador.navigate(['editorial-listar']);
+          },900)
+         
+        }else{
+          alert("Credenciales Incorrectas");
+        }
       
+      },
+      error:(error)=>{
+        console.log(error.message);
       }
     })
 
    
+  }
+
+  registrarse(){
+    this.ruteador.navigateByUrl('registro');
   }
 
 
