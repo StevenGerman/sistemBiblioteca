@@ -13,7 +13,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 export class DashEstudianteComponent implements OnInit{
 
   idPersona: string | null = "1";
-  persona: Persona = { perApellido: "", perContrasena: "", perDni: "", perNombre: "", rolNombre: "" };
+  persona: Persona = { perApellido: "", perContrasena: "", perDni: "", perNombre: "" };
 
   constructor(
     private ruteador: Router,
@@ -22,16 +22,21 @@ export class DashEstudianteComponent implements OnInit{
     private servicioLibros:LibroService,
   ){}
 
-  ngOnInit():void{}
+  ngOnInit():void{
+    this.cargarDatosPersonales();
+  }
     
 
 
 
   cargarDatosPersonales() {
     this.idPersona = this.serivicioLogin.obtenerIdPersona();
+    console.log(this.idPersona);
     if (this.idPersona) {
       this.servicioPersonas.obtenerPersonaID(this.idPersona).subscribe((respuesta) => {
         console.log(respuesta);
+        console.log(respuesta.perNombre);
+        this.persona.idPersona = respuesta.idPersona;
         this.persona.perNombre = respuesta.perNombre;
         this.persona.perApellido = respuesta.perApellido;
         this.persona.perDni = respuesta.perDni;
@@ -39,7 +44,14 @@ export class DashEstudianteComponent implements OnInit{
       }, (error) => {
         console.error("Error al obtener los datos de la persona", error);
       });
+
     }
+  }
+  editarPersona(idPersona:any){
+    
+   /* this.servicioPersonas.editarPersona(idPersona).subscribe((respuesta)=>{
+      console.log(respuesta);
+    })*/
   }
   logout(){
     this.serivicioLogin.logout();

@@ -24,7 +24,7 @@ export class PersonaService {
           return this.clienteHttp.post(this.urlApi,datosPersona);
         }
       
-        editarEditorial(datosPersona:Persona){
+        editarPersona(datosPersona:Persona){
           return this.clienteHttp.put(this.urlApi,datosPersona);
         }
       
