@@ -31,6 +31,7 @@ export class DashEstudianteComponent implements OnInit{
     this.idPersona = this.serivicioLogin.obtenerIdPersona();
     if (this.idPersona) {
       this.servicioPersonas.obtenerPersonaID(this.idPersona).subscribe((respuesta) => {
+        console.log(respuesta);
         this.persona.perNombre = respuesta.perNombre;
         this.persona.perApellido = respuesta.perApellido;
         this.persona.perDni = respuesta.perDni;
