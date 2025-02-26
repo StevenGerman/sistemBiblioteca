@@ -32,9 +32,14 @@
             </ul>
         </div>
         <div class="col-6 d-flex justify-content-around p-2">
-            <button class="btn btn-primary" routerLink="login" >Iniciar Secion</button>
-            <button class="btn btn-secondary" routerLink="registro" >Registrarse</button>
+            <!-- Mostrar estos botones solo si el usuario NO está autenticado -->
+            <a class="btn btn-primary" routerLink="/login" *ngIf="!isLoggedIn">Iniciar Sesión</a>
+            <a class="btn btn-secondary" routerLink="/registro" *ngIf="!isLoggedIn">Registrarse</a>
+        
+            <!-- Mostrar el botón de Logout si el usuario ESTÁ autenticado -->
+            <button class="btn btn-danger" (click)="logOut()" *ngIf="isLoggedIn">Cerrar Sesión</button>
         </div>
+        
     </div>
     
 

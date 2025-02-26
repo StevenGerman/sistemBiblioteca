@@ -22,12 +22,13 @@ import { MateriasAgregarComponent } from './components/pages/materias/materias-a
 import { MateriasEditarComponent } from './components/pages/materias/materias-editar/materias-editar.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { RegistroComponent } from './components/login/registro/registro.component';
+import { authGuard } from './custom/auth.guard';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
 
-  {path: 'editorial-listar', component: EditorialListarComponent},
+  {path: 'editorial-listar', component: EditorialListarComponent,canActivate:[authGuard]},
   {path: 'editorial-agregar', component: EditorialAgregarComponent},
   {path: 'editorial-editar/:id', component: EditorialEditarComponent},
 
