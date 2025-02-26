@@ -16,8 +16,8 @@ export class PersonaService {
     return this.clienteHttp.get<Persona[]>(this.urlApi);
   }
 
-  obtenerPersonaID():Observable<Persona>{
-        return this.clienteHttp.get<Persona>(this.urlApi);
+  obtenerPersonaID(idPersona:any):Observable<Persona>{
+     return this.clienteHttp.get<Persona>(`${this.urlApi}?idPersona=${idPersona}`);
       }
     
         agregarPersona(datosPersona:Persona):Observable<any>{

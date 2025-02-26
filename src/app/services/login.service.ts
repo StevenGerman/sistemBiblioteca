@@ -31,6 +31,9 @@ export class LoginService {
   obtenerRol(): string | null {
     return localStorage.getItem('rolNombre');
   }
+  obtenerIdPersona(): string | null {
+    return localStorage.getItem('idPersona');
+  }
 
   estaAutenticado(): boolean {
     return this.obtenerToken() !== null;

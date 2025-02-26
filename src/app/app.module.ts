@@ -29,6 +29,8 @@ import { AutoresListarComponent } from './components/pages/autores/autores-lista
 import { LoginComponent } from './components/login/login/login.component';
 import { RegistroComponent } from './components/login/registro/registro.component';
 import { NoaccesoComponent } from './components/pages/noacceso/noacceso/noacceso.component';
+import { DashBibliotecarioComponent } from './components/dash/dash-bibliotecario/dash-bibliotecario.component';
+import { DashEstudianteComponent } from './components/dash/dash-estudiante/dash-estudiante.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { NoaccesoComponent } from './components/pages/noacceso/noacceso/noacceso
     LoginComponent,
     RegistroComponent,
     NoaccesoComponent,
+    DashBibliotecarioComponent,
+    DashEstudianteComponent,
     
   ],
   imports: [

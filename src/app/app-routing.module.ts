@@ -25,12 +25,19 @@ import { RegistroComponent } from './components/login/registro/registro.componen
 import { authGuard } from './custom/auth.guard';
 import { NoaccesoComponent } from './components/pages/noacceso/noacceso/noacceso.component';
 import { roleGuard } from './custom/role.guard';
+import { DashBibliotecarioComponent } from './components/dash/dash-bibliotecario/dash-bibliotecario.component';
+import { DashEstudianteComponent } from './components/dash/dash-estudiante/dash-estudiante.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
 
   {path: 'acceso-denegado', component: NoaccesoComponent,canActivate:[authGuard]},
+
+
+  {path: 'dash-bibliotecario', component: DashBibliotecarioComponent,canActivate:[authGuard,roleGuard]},
+  {path: 'dash-estudiante', component: DashEstudianteComponent,canActivate:[authGuard]},
+
 
   {path: 'editorial-listar', component: EditorialListarComponent,canActivate:[authGuard]},
   {path: 'editorial-agregar', component: EditorialAgregarComponent,canActivate:[authGuard,roleGuard]},

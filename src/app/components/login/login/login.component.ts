@@ -53,12 +53,17 @@ export class LoginComponent implements OnInit{
           
           const rol : any  = jwt_decode(algo);
           localStorage.setItem("rolNombre", rol.data.rolNombre);
+          localStorage.setItem("idPersona", rol.data.idPersona);
           console.log(rol);
           setTimeout(()=>{
             
-  
-            this.ruteador.navigate(['editorial-listar']);
-          },900)
+            if(this.serivicioLogin.obtenerRol()== 'Bibliotecario'){
+              this.ruteador.navigate(['dash-bibliotecario']);
+            }else if(this.serivicioLogin.obtenerRol()== 'Estudiante') {
+              this.ruteador.navigate(['dash-estudiante']);
+            }
+            
+          },400)
          
         }else{
           alert("Credenciales Incorrectas");
