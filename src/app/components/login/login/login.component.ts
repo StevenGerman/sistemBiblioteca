@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Login } from 'src/app/interfaces/login.model';
 import { LoginService } from 'src/app/services/login.service';
-
+import jwt_decode from 'jwt-decode';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -49,6 +49,11 @@ export class LoginComponent implements OnInit{
         if(data.isSuccess){
           localStorage.setItem("token", data.token);
           console.log(data.token);
+          const algo = data.token;
+          
+          const rol : any  = jwt_decode(algo);
+          localStorage.setItem("Rol", rol.data.rolNombre);
+          console.log(rol);
           setTimeout(()=>{
             
   

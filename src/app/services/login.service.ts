@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Login } from '../interfaces/login.model';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import jwt_decode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,11 @@ export class LoginService {
 
   guardarToken(token: string): void {
     localStorage.setItem('token', token);
+
+    const decoded: any = jwt_decode(token);
+    const rolNombre = decoded.data.rolNombre;
+    console.log('Rol:', rolNombre);
+    localStorage.setItem('rolNombre', rolNombre);
   }
 
   obtenerToken(): string | null {
