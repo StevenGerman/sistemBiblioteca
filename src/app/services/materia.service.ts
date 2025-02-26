@@ -22,7 +22,8 @@ export class MateriaService {
   }
 
     agregarMateria(datosMateria:Materia):Observable<any>{
-      return this.clienteHttp.post(this.apiUrl,datosMateria);
+      const headers = new HttpHeaders().set("Authorization", `Bearer ${localStorage.getItem('token')}`);
+      return this.clienteHttp.post(this.apiUrl,datosMateria,{ headers } );
     }
   
     editarEditorial(datosMateria:Materia){
