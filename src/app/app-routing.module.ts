@@ -33,16 +33,16 @@ const routes: Routes = [
   {path: 'acceso-denegado', component: NoaccesoComponent,canActivate:[authGuard]},
 
   {path: 'editorial-listar', component: EditorialListarComponent,canActivate:[authGuard]},
-  {path: 'editorial-agregar', component: EditorialAgregarComponent,canActivate:[authGuard]},
-  {path: 'editorial-editar/:id', component: EditorialEditarComponent,canActivate:[authGuard]},
+  {path: 'editorial-agregar', component: EditorialAgregarComponent,canActivate:[authGuard,roleGuard]},
+  {path: 'editorial-editar/:id', component: EditorialEditarComponent,canActivate:[authGuard,roleGuard]},
 
-  {path: 'rol-listar', component: RolesListarComponent,canActivate:[authGuard]},
-  {path: 'rol-agregar', component: RolesAgregarComponent ,canActivate:[authGuard]},
-  {path: 'rol-editar', component: RolesEditarComponent,canActivate:[authGuard]},
+  {path: 'rol-listar', component: RolesListarComponent,canActivate:[authGuard,roleGuard]},
+  {path: 'rol-agregar', component: RolesAgregarComponent ,canActivate:[authGuard,roleGuard]},
+  {path: 'rol-editar', component: RolesEditarComponent,canActivate:[authGuard,roleGuard]},
 
   {path: 'libro-listar', component: LibroListarComponent,canActivate:[authGuard]},
-  {path: 'libro-agregar', component: LibroAgregarComponent,canActivate:[authGuard]},
-  {path: 'libro-editar', component: LibroEditarComponent,canActivate:[authGuard]},
+  {path: 'libro-agregar', component: LibroAgregarComponent,canActivate:[authGuard,roleGuard]},
+  {path: 'libro-editar', component: LibroEditarComponent,canActivate:[authGuard,roleGuard]},
 
   {path: 'persona-listar', component: PersonaListarComponent,canActivate:[authGuard,roleGuard]},
   {path: 'persona-agregar', component: PersonaAgregarComponent,canActivate:[authGuard,roleGuard]},
@@ -50,15 +50,15 @@ const routes: Routes = [
 
   {path: 'prestamo-listar', component: PrestamosListarComponent,canActivate:[authGuard]},
   {path: 'prestamo-agregar', component: PrestamosAgregarComponent,canActivate:[authGuard]},
-  {path: 'prestamo-editar', component: PrestamosEditarComponent,canActivate:[authGuard]},
+  {path: 'prestamo-editar', component: PrestamosEditarComponent,canActivate:[authGuard,roleGuard]},
 
   {path: 'autores-listar', component: AutoresListarComponent,canActivate:[authGuard]},
-  {path: 'autores-agregar', component: AutoresListarComponent,canActivate:[authGuard]},
-  {path: 'autores-editar', component: AutoresListarComponent,canActivate:[authGuard]},
+  {path: 'autores-agregar', component: AutoresListarComponent,canActivate:[authGuard,roleGuard]},
+  {path: 'autores-editar', component: AutoresListarComponent,canActivate:[authGuard,roleGuard]},
 
   {path: 'materias-listar', component: MateriasListarComponent,canActivate:[authGuard]},
-  {path: 'materias-agregar', component: MateriasAgregarComponent,canActivate:[authGuard]},
-  {path: 'materias-editar', component: MateriasEditarComponent,canActivate:[authGuard]},
+  {path: 'materias-agregar', component: MateriasAgregarComponent,canActivate:[authGuard,roleGuard]},
+  {path: 'materias-editar', component: MateriasEditarComponent,canActivate:[authGuard,roleGuard]},
 
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},

@@ -28,6 +28,9 @@ export class LoginService {
   obtenerToken(): string | null {
     return localStorage.getItem('token');
   }
+  obtenerRol(): string | null {
+    return localStorage.getItem('rolNombre');
+  }
 
   estaAutenticado(): boolean {
     return this.obtenerToken() !== null;

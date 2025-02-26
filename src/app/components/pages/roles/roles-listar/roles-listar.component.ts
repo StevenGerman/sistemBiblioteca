@@ -11,15 +11,18 @@ export class RolesListarComponent implements OnInit {
 
 
   listadoRoles:Rol[]= []
-
+  
   constructor(
 
     private servicioRoles:RolService,
+    
   ){
     this.cargarRoles();
   }
 
-  ngOnInit(){}
+  ngOnInit(){
+    
+  }
 
   cargarRoles(){
     this.servicioRoles.obtenerRoles().subscribe((respuesta)=>{

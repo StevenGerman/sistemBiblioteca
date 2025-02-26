@@ -29,9 +29,10 @@
             <tr *ngFor="let materia of listadoMaterias" >
               <td> {{materia.matNombre}} </td>
               <td>
-              <button class="btn btn-warning m-2" 
+                
+              <button *ngIf="!isEstudiante"  class="btn btn-warning m-2" 
              ><i class="bi bi-pencil-square"></i></button>
-              <button class="btn btn-danger m-2" (click)="eliminarMateria(materia.idMateria)" ><i class="bi bi-trash-fill"></i></button>
+              <button  *ngIf="!isEstudiante"  class="btn btn-danger m-2" (click)="eliminarMateria(materia.idMateria)" ><i class="bi bi-trash-fill"></i></button>
               </td>
             </tr>
           </tbody>
