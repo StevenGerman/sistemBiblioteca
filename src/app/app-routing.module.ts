@@ -23,38 +23,42 @@ import { MateriasEditarComponent } from './components/pages/materias/materias-ed
 import { LoginComponent } from './components/login/login/login.component';
 import { RegistroComponent } from './components/login/registro/registro.component';
 import { authGuard } from './custom/auth.guard';
+import { NoaccesoComponent } from './components/pages/noacceso/noacceso/noacceso.component';
+import { roleGuard } from './custom/role.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
 
+  {path: 'acceso-denegado', component: NoaccesoComponent,canActivate:[authGuard]},
+
   {path: 'editorial-listar', component: EditorialListarComponent,canActivate:[authGuard]},
-  {path: 'editorial-agregar', component: EditorialAgregarComponent},
-  {path: 'editorial-editar/:id', component: EditorialEditarComponent},
+  {path: 'editorial-agregar', component: EditorialAgregarComponent,canActivate:[authGuard]},
+  {path: 'editorial-editar/:id', component: EditorialEditarComponent,canActivate:[authGuard]},
 
-  {path: 'rol-listar', component: RolesListarComponent},
-  {path: 'rol-agregar', component: RolesAgregarComponent },
-  {path: 'rol-editar', component: RolesEditarComponent},
+  {path: 'rol-listar', component: RolesListarComponent,canActivate:[authGuard]},
+  {path: 'rol-agregar', component: RolesAgregarComponent ,canActivate:[authGuard]},
+  {path: 'rol-editar', component: RolesEditarComponent,canActivate:[authGuard]},
 
-  {path: 'libro-listar', component: LibroListarComponent},
-  {path: 'libro-agregar', component: LibroAgregarComponent},
-  {path: 'libro-editar', component: LibroEditarComponent},
+  {path: 'libro-listar', component: LibroListarComponent,canActivate:[authGuard]},
+  {path: 'libro-agregar', component: LibroAgregarComponent,canActivate:[authGuard]},
+  {path: 'libro-editar', component: LibroEditarComponent,canActivate:[authGuard]},
 
-  {path: 'persona-listar', component: PersonaListarComponent},
-  {path: 'persona-agregar', component: PersonaAgregarComponent},
-  {path: 'persona-editar', component: PersonaEditarComponent},
+  {path: 'persona-listar', component: PersonaListarComponent,canActivate:[authGuard,roleGuard]},
+  {path: 'persona-agregar', component: PersonaAgregarComponent,canActivate:[authGuard,roleGuard]},
+  {path: 'persona-editar', component: PersonaEditarComponent,canActivate:[authGuard,roleGuard]},
 
-  {path: 'prestamo-listar', component: PrestamosListarComponent},
-  {path: 'prestamo-agregar', component: PrestamosAgregarComponent},
-  {path: 'prestamo-editar', component: PrestamosEditarComponent},
+  {path: 'prestamo-listar', component: PrestamosListarComponent,canActivate:[authGuard]},
+  {path: 'prestamo-agregar', component: PrestamosAgregarComponent,canActivate:[authGuard]},
+  {path: 'prestamo-editar', component: PrestamosEditarComponent,canActivate:[authGuard]},
 
-  {path: 'autores-listar', component: AutoresListarComponent},
-  {path: 'autores-agregar', component: AutoresListarComponent},
-  {path: 'autores-editar', component: AutoresListarComponent},
+  {path: 'autores-listar', component: AutoresListarComponent,canActivate:[authGuard]},
+  {path: 'autores-agregar', component: AutoresListarComponent,canActivate:[authGuard]},
+  {path: 'autores-editar', component: AutoresListarComponent,canActivate:[authGuard]},
 
-  {path: 'materias-listar', component: MateriasListarComponent},
-  {path: 'materias-agregar', component: MateriasAgregarComponent},
-  {path: 'materias-editar', component: MateriasEditarComponent},
+  {path: 'materias-listar', component: MateriasListarComponent,canActivate:[authGuard]},
+  {path: 'materias-agregar', component: MateriasAgregarComponent,canActivate:[authGuard]},
+  {path: 'materias-editar', component: MateriasEditarComponent,canActivate:[authGuard]},
 
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},

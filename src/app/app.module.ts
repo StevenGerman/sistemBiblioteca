@@ -28,6 +28,7 @@ import { RolesEditarComponent } from './components/pages/roles/roles-editar/role
 import { AutoresListarComponent } from './components/pages/autores/autores-listar/autores-listar.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { RegistroComponent } from './components/login/registro/registro.component';
+import { NoaccesoComponent } from './components/pages/noacceso/noacceso/noacceso.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { RegistroComponent } from './components/login/registro/registro.componen
     AutoresListarComponent,
     LoginComponent,
     RegistroComponent,
+    NoaccesoComponent,
     
   ],
   imports: [

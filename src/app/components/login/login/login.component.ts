@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit{
           const algo = data.token;
           
           const rol : any  = jwt_decode(algo);
-          localStorage.setItem("Rol", rol.data.rolNombre);
+          localStorage.setItem("rolNombre", rol.data.rolNombre);
           console.log(rol);
           setTimeout(()=>{
             

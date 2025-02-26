@@ -21,11 +21,8 @@ export class LoginService {
 
   guardarToken(token: string): void {
     localStorage.setItem('token', token);
-
-    const decoded: any = jwt_decode(token);
-    const rolNombre = decoded.data.rolNombre;
-    console.log('Rol:', rolNombre);
-    localStorage.setItem('rolNombre', rolNombre);
+    //localStorage.setItem('rolNombre', rolNombre);
+    
   }
 
   obtenerToken(): string | null {
@@ -38,6 +35,7 @@ export class LoginService {
 
   logout(): void {
     localStorage.removeItem('token');
+    localStorage.removeItem('rolNombre');
     this.ruteador.navigate(['login']);
   }
 
